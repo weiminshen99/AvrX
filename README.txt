@@ -1,5 +1,9 @@
 AvrX for avr-gcc, version 2.6
 
+10-Oct-2024 - Author Wei-Min Shen
+	    - Fix a compile error in serialio.S for avr-gcc 12.0
+	      for define SIG_UART_RECV and SIG_UART_DATA
+
 19-Sep-2005 - Updated for WinAvr 3.4.3.
 	    - Used new WinAvr makefile template.
 	    - Added AvrXFifo facility

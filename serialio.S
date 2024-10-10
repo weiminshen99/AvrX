@@ -94,12 +94,20 @@ any C code.
 //#	define UBRR UBRR0L //kororos
 #	define UBRRL UBRR0L //kororos
 #endif
-#if defined(SIG_UART0_RECV)
+// Wei-Min Shen, fixed for avr-gcc 12.0
+/*#if defined(SIG_UART0_RECV)
 #    define SIG_UART_RECV SIG_UART0_RECV
 #    define SIG_UART_DATA SIG_UART0_DATA
 #elif defined (SIG_USART0_RECV)
 #    define SIG_UART_RECV SIG_USART0_RECV
 #    define SIG_UART_DATA SIG_USART0_DATA
+#endif*/
+#if defined(USART0_RX_vect)
+#    define SIG_UART_RECV USART0_RX_vect        // avr-gcc 4.8.2
+#    define SIG_UART_DATA USART0_UDRE_vect      // avr-gcc 4.8.2
+#else
+#    define SIG_UART_RECV SIG_UART0_RECV        // avr-gcc 3.4.3
+#    define SIG_UART_DATA SIG_UART0_DATA        // avr-gcc 3.4.3
 #endif
 
 // A special just for IAR
