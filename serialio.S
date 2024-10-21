@@ -22,6 +22,10 @@ http://www.gnu.org/copyleft/lgpl.html
 
 
 Revision:
+
+10/10/2024 -  	Wei-Min Shen, fixed for avr-gcc 12.0
+		for define SIG_UART_RECV and SIG_UART_DATA
+
 20050918 - This file removed from avrx library (it is too confusing, to limited).
 
 20020907 - Delete all header file references.  Fix this in "avrx.inc"

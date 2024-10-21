@@ -54,7 +54,7 @@ FORMAT = ihex
 
 # Target file name (without extension).
 
-TARGET = ../../../lib/libavrxsystem
+TARGET 		= libavrxsystem
 SINGLESTEP	= -DSINGLESTEPSUPPORT
 
 #list C source files
@@ -441,6 +441,7 @@ clean_list :
 	$(REMOVE) $(TARGET).sym
 	$(REMOVE) $(TARGET).lnk
 	$(REMOVE) $(TARGET).lss
+	$(REMOVE) $(TARGET).a
 	$(REMOVE) $(OBJ)
 	$(REMOVE) $(LST)
 	$(REMOVE) $(SRC:.c=.s)
